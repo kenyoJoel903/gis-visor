@@ -33,6 +33,8 @@ export class MapaService {
 
         const geodirAttr ="<a href='http://www.geodir.co/'><b>Geodir</b></a> &copy; Map";
 
+        const satelitalAttr = "Kenyojoel903@gmail.com";
+
         this.mapasBase = {
           OpenStreetMap: L.tileLayer(
             "http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
@@ -58,6 +60,12 @@ export class MapaService {
               attribution: geodirAttr
             }
           ),
+          Satelital: L.tileLayer(
+            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            {
+              attribution: satelitalAttr
+            }
+          )
         };
    }
 
@@ -68,6 +76,7 @@ export class MapaService {
      capas.push(new Layer(Math.random(), 'distrito', 'Capa de distritos', GEOSERVER.WORKSPACE));
      capas.push(new Layer(Math.random(), 'lote_nse', 'Capa de nivel socieconómico', GEOSERVER.WORKSPACE));
      capas.push(new Layer(Math.random(), 'lote_demo', 'Capa de lotes', GEOSERVER.WORKSPACE));
+     capas.push(new Layer(Math.random(), 'valvula', 'Capa de válvulas', GEOSERVER.WORKSPACE));
      return capas;
    }
 

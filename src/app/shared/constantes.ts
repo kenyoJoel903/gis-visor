@@ -1,6 +1,6 @@
 export const CENTRO_MAPA = {
-    latitud : -12.1035703,
-    longitud :  -77.0327431
+    latitud : -12.062029,
+    longitud :  -75.291850
 };
 
 export const GEOSERVER = {

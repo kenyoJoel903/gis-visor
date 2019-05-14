@@ -34,10 +34,10 @@ export class AppComponent implements OnInit{
     const mapa =  L.map("map", {
       zoomControl: false,
       center: centroMapa,
-      zoom: 16,
+      zoom: 17,
       minZoom: 2,
       maxZoom: 19,
-      layers: [this.mapaService.mapasBase.CartoDB]
+      layers: [this.mapaService.mapasBase.Satelital]
     });
     L.control.zoom({ position: "topright" }).addTo(mapa);
     const controlLayer = L.control.layers(this.mapaService.mapasBase, this.mapaService.overlayers).addTo(mapa);
